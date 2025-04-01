@@ -7,7 +7,7 @@ branding:
 inputs:
   tools-repo:
     description: 'Override tt-support-tools repository'
-    default: 'TinyTapeout/tt-support-tools'
+    default: 'sylefeb/tt-support-tools'
     required: false
     type: string
   tools-ref:
@@ -194,7 +194,7 @@ runs:
         strm2oas tt_submission/${TOP_MODULE}.gds tt_submission/${TOP_MODULE}.oas
         if [ "$PDK" == "sky130A" ]; then
           cp runs/wokwi/final/pnl/${TOP_MODULE}.pnl.v tt_submission/${TOP_MODULE}.v
-        else        
+        else
           cp runs/wokwi/final/nl/${TOP_MODULE}.nl.v tt_submission/${TOP_MODULE}.v
         fi
         cp runs/wokwi/{OPENLANE_VERSION,PDK_SOURCES,resolved.json} tt_submission/
