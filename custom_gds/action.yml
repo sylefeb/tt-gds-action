@@ -7,7 +7,7 @@ branding:
 inputs:
   tools-repo:
     description: 'Override tt-support-tools repository'
-    default: 'TinyTapeout/tt-support-tools'
+    default: 'sylefeb/tt-support-tools'
     required: false
     type: string
   tools-ref:
@@ -48,7 +48,7 @@ runs:
       run: |
         cp ${{ inputs.gds_path }} tt_submission/${{ inputs.top_module }}.gds
         cp ${{ inputs.lef_path }} tt_submission/${{ inputs.top_module }}.lef
-        
+
         touch tt_submission/${{ inputs.top_module }}.v
         if [ -n "${{ inputs.verilog_path }}" ]; then
           cp ${{ inputs.verilog_path }} tt_submission/${{ inputs.top_module }}.v
