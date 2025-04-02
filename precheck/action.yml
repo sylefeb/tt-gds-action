@@ -30,7 +30,7 @@ runs:
     - name: Checkout tt-support-tools repo
       uses: actions/checkout@v4
       with:
-        repository: "${{ inputs.tools-repo }}"
+        repository: sylefeb/tt-support-tools
         path: tt
         ref: "${{ inputs.tools-ref }}"
 
