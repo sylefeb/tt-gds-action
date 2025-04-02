@@ -7,7 +7,7 @@ branding:
 inputs:
   tools-repo:
     description: 'Override tt-support-tools repository'
-    default: 'TinyTapeout/tt-support-tools'
+    default: 'sylefeb/tt-support-tools'
     required: false
     type: string
   tools-ref:
